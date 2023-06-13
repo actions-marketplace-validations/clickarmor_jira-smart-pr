@@ -14,9 +14,10 @@ jobs:
   add-jira-ticket:
     runs-on: ubuntu-latest
     steps:
-      - uses: smasala/jira-ticket-assigner@v1.0.1
+      - uses: clickarmor/jira-smart-pr@v2.0.1
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          jira-url: https://my.jira-server.com
-          project-prefix: MYPROJ
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          issue-prefix: PROJ
+          jira-url: https://<domain>.atlassian.net/browse
+          issue-regexp: [a-zA-Z]+-[0-9]+
 ```
