@@ -1,14 +1,21 @@
-name: 'Jira Ticket Assigner'
+name: 'Jira Smart PR (forked from smasala/jira-ticket-assigner)'
 description: 'Automatically adds jira tickets by scanning the branch name and adding them as a comment to the PR'
 author: 'Steven Masala'
 inputs:
-  repo-token:              # change this
-    description: 'Repo token'
+  token:              # change this
+    description: Github Token
+    required: true
     default: ${{ github.token }}
+  issue-prefix:
+    required: true
+    description: 'Ticket prefix such as MYPROJ in MYPROJ-1234'
   jira-url:
     description: 'Jira url domain'
-  project-prefix:
-    description: 'Ticket prefix such as MYPROJ in MYPROJ-1234'
+    required: true
+  issue-regexp:
+    description: Custom regexp to extract the issue key from the branch name
+    required: false
+    default: ''
 runs:
   using: 'node12'
   main: 'dist/index.js'
