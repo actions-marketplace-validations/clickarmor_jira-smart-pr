@@ -14,7 +14,7 @@ jobs:
   add-jira-ticket:
     runs-on: ubuntu-latest
     steps:
-      - uses: clickarmor/jira-smart-pr@v2.0.1
+      - uses: clickarmor/jira-smart-pr@v.2.0.1
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           issue-prefix: PROJ
