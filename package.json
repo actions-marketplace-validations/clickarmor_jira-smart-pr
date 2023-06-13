@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/jira-ticket-assigner.git"
+    "url": "git+https://github.com/clickarmor/jira-smart-pr.git"
   },
   "keywords": [
     "actions",
